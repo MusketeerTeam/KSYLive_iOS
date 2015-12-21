@@ -1,7 +1,4 @@
-xcodeproj 'NAMETests'
-workspace '../NAME'
-
 
 #pod 'KSYLive', :git => 'https://github.com/ksvc/KSYLive_iOS.git'
-pod 'KSYLive', :path => '../'
+pod 'KSYLive_iOS', :path => '../'
 
