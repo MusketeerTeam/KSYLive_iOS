@@ -92,9 +92,11 @@
 </ol>
 
 <ul>
-<li>demo    : demo工程为KSYLive ，演示本SDK的主要接口的使用</li>
-<li>doc     : appleDoc风格的接口文档，主要描述接口函数，参数和类型定义</li>
-<li><p>framework : 本SDK的静态库framework，集成时需要将该framework加入到项目中</p></li>
+<li>demo       : demo工程为KSYLive ，演示本SDK的主要接口的使用</li>
+<li>doc/docset : appleDoc风格的接口文档，主要描述接口函数，参数和类型定义</li>
+<li>doc/html   : html风格的<a href="http://ksvc.github.io/KSYLive_iOS/index.html">接口文档</a>
+</li>
+<li><p>framework  : 本SDK的静态库framework，集成时需要将该framework加入到项目中</p></li>
 </ul>
 
 <ol>
@@ -140,7 +142,7 @@
 <ul>
 <li>SDK 鉴权设置
 使用SDK前, 需要联系金山云获取合法的ak/sk 在开始推流前，需要使用KSYAuthInfo类的setAuthInfo将ak和加密后的sk传入SDK内部, 具体代码见demo中的initKSYAuth方法</li>
-<li>SDK的核心类为KSYStreamer, 可以在VC中增加 KSYStreamer 的属性, 后续与推流相关的操作大部分都要通过KSYStreamer 来进行</li>
+<li>SDK的核心类为<a href="http://ksvc.github.io/KSYLive_iOS/html/Classes/KSYStreamer.html">KSYStreamer</a>, 可以在VC中增加 KSYStreamer 的属性, 后续与推流相关的操作大部分都要通过KSYStreamer 来进行</li>
 </ul>
 
 <pre><code>@property KSYStreamer * streamer;
@@ -193,7 +195,7 @@
 </table>
 
 <p>比如 当采集设备的状态发生变化时，对应的接收回调函数会被调用，通过_streamer.captureState属性,可查询到新的状态
-其中如果推流状态变为 KSYStreamStateError,需要通过streamErrorCode 具体查询其错误原因</p>
+其中如果推流状态变为 <a href="/html/Constants/KSYStreamState.html">KSYStreamStateError</a>,需要通过streamErrorCode 具体查询其错误原因</p>
 
 <ul>
 <li>开始/停止预览
