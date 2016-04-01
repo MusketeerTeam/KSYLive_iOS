@@ -20,152 +20,328 @@
 
     <section class="main-content">
       <h1>
-<a id="ksy-live-ios-sdk使用手册" class="anchor" href="#ksy-live-ios-sdk%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>KSY Live iOS SDK使用手册</h1>
+<a id="ksy-live-ios-sdk使用手册" class="anchor" href="#ksy-live-ios-sdk%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="http://ksvc.github.io/KSYLive_iOS/index.html">KSY Live iOS SDK</a>使用手册</h1>
 
 <h2>
-<a id="阅读对象" class="anchor" href="#%E9%98%85%E8%AF%BB%E5%AF%B9%E8%B1%A1" aria-hidden="true"><span class="octicon octicon-link"></span></a>阅读对象</h2>
+<a id="sdk-概述" class="anchor" href="#sdk-%E6%A6%82%E8%BF%B0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SDK 概述</h2>
 
-<p>本文档面向所有使用该SDK的开发人员, 测试人员等, 要求读者具有一定的iOS编程开发经验.</p>
-
-<h2>
-<a id="ksy-live-ios-sdk-概述" class="anchor" href="#ksy-live-ios-sdk-%E6%A6%82%E8%BF%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>KSY Live iOS SDK 概述</h2>
-
-<p>KSY Live iOS SDK是金山云推出的 iOS 平台上使用的软件开发工具包(SDK), 其中Stremer负责采集和推流。MediaPlayer负责视频播放。</p>
+<p>金山云推出的iOS平台上使用的软件开发工具包,可高度定制化和二次开发.</p>
 
 <h2>
-<a id="主要功能点" class="anchor" href="#%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E7%82%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>主要功能点</h2>
+<a id="功能特性" class="anchor" href="#%E5%8A%9F%E8%83%BD%E7%89%B9%E6%80%A7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>功能特性</h2>
 
 <h3>
-<a id="stremer推流特点" class="anchor" href="#stremer%E6%8E%A8%E6%B5%81%E7%89%B9%E7%82%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stremer推流特点</h3>
+<a id="推流功能" class="anchor" href="#%E6%8E%A8%E6%B5%81%E5%8A%9F%E8%83%BD" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>推流功能</h3>
 
 <ul>
-<li>音频编码：AAC</li>
-<li>视频编码：H.264 </li>
-<li>推流协议：RTMP</li>
-<li>视频分辨率：1280x720, 960x540,640x480,640x360,352x288</li>
-<li>屏幕朝向： 横屏, 竖屏</li>
-<li>iOS摄像头：前, 后置摄像头（可动态切换）</li>
-<li>音视频目标码率：可设</li>
-<li>根据网络带宽自适应调整视频的码率</li>
-<li>闪光灯：开/关</li>
-<li>Apple Doc 文档支持</li>
-<li>可使用系统原生接口对当前采集设备进行操作</li>
+<li>[x] AAC 音频编码</li>
+<li>[x] H.264 视频编码</li>
+<li>[x] 多分辨率编码支持</li>
+<li>[x] 摄像头控制（朝向,闪光灯,前后摄像头）</li>
+<li>[x] 摄像头控制（可以调用原生的系统api）</li>
+<li>[x] 动态设定音视频码率</li>
+<li>[x] 根据网络带宽自适应调整视频的码率</li>
+<li>[x] 支持 RTMP 协议直播推流</li>
+<li>[x] <a href="http://ksvc.github.io/KSYLive_iOS/html/index.html">在线API 文档支持</a>
+</li>
+<li>[x] Apple Doc 文档支持</li>
 </ul>
 
 <h3>
-<a id="mediaplayer播放特点" class="anchor" href="#mediaplayer%E6%92%AD%E6%94%BE%E7%89%B9%E7%82%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>MediaPlayer播放特点</h3>
+<a id="播放特点" class="anchor" href="#%E6%92%AD%E6%94%BE%E7%89%B9%E7%82%B9" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>播放特点</h3>
 
 <ul>
-<li>与系统播放器MPMoviePlayerController接口一致，可以无缝快速切换至KSYMediaPlayer；</li>
-<li>本地全媒体格式支持, 并对主流的媒体格式(mp4, avi, wmv, flv, mkv, mov, rmvb 等 )进行优化；</li>
-<li>支持广泛的流式视频格式, HLS, RTMP, HTTP Rseudo-Streaming 等；</li>
-<li>低延时直播体验，配合金山云推流sdk，可以达到全程直播稳定的4秒内延时；</li>
-<li>实现快速满屏播放，为用户带来更快捷优质的播放体验；</li>
-<li>版本适配支持iOS 7.0以上版本；</li>
-<li>业内一流的H.265解码；</li>
-<li>小于2M大小的超轻量级直播sdk；</li>
+<li>[x] 与系统播放器MPMoviePlayerController接口一致，可以无缝快速切换至KSYMediaPlayer；</li>
+<li>[x] 本地全媒体格式支持, 并对主流的媒体格式(mp4, avi, wmv, flv, mkv, mov, rmvb 等 )进行优化；</li>
+<li>[x] 支持广泛的流式视频格式, HLS, RTMP, HTTP Rseudo-Streaming 等；</li>
+<li>[x] 低延时直播体验，配合金山云推流sdk，可以达到全程直播稳定的4秒内延时；</li>
+<li>[x] 实现快速满屏播放，为用户带来更快捷优质的播放体验；</li>
+<li>[x] 版本适配支持iOS 7.0以上版本；</li>
+<li>[x] 业内一流的H.265解码；</li>
+<li>[x] 小于2M大小的超轻量级直播sdk；</li>
 </ul>
 
 <h2>
-<a id="sdk-下载" class="anchor" href="#sdk-%E4%B8%8B%E8%BD%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a>SDK 下载</h2>
-
-<p>本SDK 提供如下三种获取方式:</p>
+<a id="内容摘要" class="anchor" href="#%E5%86%85%E5%AE%B9%E6%91%98%E8%A6%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>内容摘要</h2>
 
 <ul>
-<li>使用金山云账户邮件向 <a href="mailto:taochuntang@kingsoft.com">taochuntang@kingsoft.com</a>索取;</li>
-<li>从github下载：<a href="https://github.com/ksvc/KSYLive_iOS.git">https://github.com/ksvc/KSYLive_iOS.git</a>
-</li>
-<li>使用Cocoapods进行安装，将如下语句加入你的Podfile：</li>
+<li>
+<a href="##%E5%B7%A5%E7%A8%8B%E7%8E%AF%E5%A2%83">工程环境</a>
+
+<ul>
+<li><a href="###%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83">运行环境</a></li>
+<li><a href="###%E4%B8%8B%E8%BD%BD%E5%B7%A5%E7%A8%8B">下载工程</a></li>
+<li><a href="###%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95">工程目录</a></li>
+<li><a href="###%E6%B7%BB%E5%8A%A0%E5%B7%A5%E7%A8%8B">添加工程</a></li>
 </ul>
+</li>
+<li>
+<a href="##SDK%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B">SDK使用示例</a>
 
-<pre><code>pod 'KSYLive', :git =&gt; 'https://github.com/ksvc/KSYLive_iOS.git'
-</code></pre>
-
-<p>执行 pod install 或者  pod update后，将SDK加入工程。</p>
+<ul>
+<li><a href="###%E5%85%A5%E5%8F%A3%E7%B1%BB">入口类</a></li>
+<li><a href="###%E9%87%87%E9%9B%86%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE">采集参数设置</a></li>
+<li><a href="###%E6%8E%A8%E6%B5%81%E7%BC%96%E7%A0%81%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE">推流编码参数设置</a></li>
+<li><a href="###%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%B0%E5%9D%80">服务器地址</a></li>
+<li><a href="###%E9%87%87%E9%9B%86%E6%8E%A8%E6%B5%81%E7%8A%B6%E6%80%81">采集推流状态</a></li>
+<li><a href="###%E5%90%AF%E5%81%9C%E9%A2%84%E8%A7%88">启停预览</a></li>
+<li><a href="###%E5%90%AF%E5%81%9C%E6%8E%A8%E6%B5%81">启停推流</a></li>
+<li><a href="###%E7%BE%8E%E9%A2%9C%E6%BB%A4%E9%95%9C">美颜滤镜</a></li>
+</ul>
+</li>
+<li><a href="##%E6%92%AD%E6%94%BE%E5%99%A8%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B">播放器使用示例</a></li>
+</ul>
 
 <h2>
-<a id="sdk-内容说明" class="anchor" href="#sdk-%E5%86%85%E5%AE%B9%E8%AF%B4%E6%98%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>SDK 内容说明</h2>
+<a id="工程环境" class="anchor" href="#%E5%B7%A5%E7%A8%8B%E7%8E%AF%E5%A2%83" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>工程环境</h2>
 
-<ol>
-<li><p>SDK压缩包
-如果获取到的为zip格式的压缩包，解压后的目录结构如下所示:</p></li>
-</ol>
-
-<ul>
-<li>demo        : demo工程为KSYLive ，演示本SDK的主要接口的使用</li>
-<li>doc/docset  : appleDoc风格的接口文档，主要描述接口函数，参数和类型定义</li>
-<li>doc/html    : appleDoc风格的<a href="/KSYLive_iOS/html/index.html">接口文档</a>
-</li>
-<li><p>framework   : 本SDK的静态库framework，集成时需要将该framework加入到项目中</p></li>
-</ul>
-
-<ol>
-<li><p>SDK Cocoapods
-通过Cocoapods 能将本SDK的静态库framework下载到本地</p></li>
-<li><p>Streamer SDK与KSYMediaPlayer SDK打包融合未KSYLive SDK进行发布，避免使用 -all_load参数时的符号冲突问题。</p></li>
-</ol>
-
-<h1>
-<a id="运行环境和兼容性" class="anchor" href="#%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E5%92%8C%E5%85%BC%E5%AE%B9%E6%80%A7" aria-hidden="true"><span class="octicon octicon-link"></span></a>运行环境和兼容性</h1>
+<h3>
+<a id="运行环境" class="anchor" href="#%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>运行环境</h3>
 
 <ul>
 <li>最低支持iOS版本：iOS 7.0</li>
 <li>最低支持iPhone型号：iPhone 4</li>
-<li>支持CPU架构： armv7, arm64</li>
+<li>支持CPU架构： armv7, armv7s,arm64</li>
 <li>含有i386和x86_64模拟器版本的库文件，推流功能无法在模拟器上工作，播放功能完全支持模拟器。</li>
 </ul>
 
-<h1>
-<a id="开始集成" class="anchor" href="#%E5%BC%80%E5%A7%8B%E9%9B%86%E6%88%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>开始集成</h1>
+<h3>
+<a id="下载工程" class="anchor" href="#%E4%B8%8B%E8%BD%BD%E5%B7%A5%E7%A8%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>下载工程</h3>
+
+<p>本SDK 提供如下两种获取方式:
+1. 从github下载：<a href="https://github.com/ksvc/KSYLive_iOS.git">https://github.com/ksvc/KSYLive_iOS.git</a>
+2. 使用Cocoapods进行安装，方法见下段。</p>
+
+<h3>
+<a id="工程目录" class="anchor" href="#%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>工程目录</h3>
+
+<ol>
+<li>
+<p>SDK压缩包
+如果获取到的为zip格式的压缩包，解压后的目录结构如下所示:</p>
+
+<ul>
+<li>demo        : demo工程为KSYLive ，演示本SDK的主要接口的使用</li>
+<li>doc/docset  : appleDoc风格的接口文档</li>
+<li>doc/html    : appleDoc风格的<a href="http://ksvc.github.io/KSYLive_iOS/html/index.html">接口文档</a>
+</li>
+<li>framework   : 本SDK的静态库framework，集成时需要将该framework加入到项目中
+
+<ul>
+<li>framework/live264/libksylive.framework<br>
+不依赖GPUImage的推流SDK</li>
+<li>framework/livegpu/libksygpulive.framework<br>
+依赖GPUImage，支持美颜功能，并包含了libksylive全部功能的推流SDK</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>SDK Cocoapods
+通过Cocoapods 能将本SDK的静态库framework下载到本地，只需要 将如下语句加入你的Podfile：<br>
+（libksylive）   </p></li>
+</ol>
+
+<pre><code>pod 'KSYLive_iOS', :git =&gt; 'https://github.com/ksvc/KSYLive_iOS.git'
+</code></pre>
+
+<p>（libksygpulive）    </p>
+
+<pre><code>pod 'KSYGPULive_iOS', :git =&gt; 'https://github.com/ksvc/KSYLive_iOS.git'
+</code></pre>
+
+<p>执行 pod install 或者 pod update后，将SDK加入工程。</p>
+
+<h3>
+<a id="添加工程" class="anchor" href="#%E6%B7%BB%E5%8A%A0%E5%B7%A5%E7%A8%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>添加工程</h3>
 
 <ul>
 <li>SDK压缩包
 将压缩包中framework下的libksylive.framework添加到XCode的工程，具体步骤为：</li>
 <li>选中应用的Target，进入项目配置页面</li>
 <li>切换到 Build Phases标签页</li>
-<li><p>在Link Binary With Libraries的列表中添加上 libksylive.framework<br>
-(点击列表底部的加号，在弹出的向导中选择libksylive.framework)</p></li>
+<li>在Link Binary With Libraries的列表中添加上 libksylive.framework<br>
+(点击列表底部的加号，在弹出的向导中选择libksylive.framework)</li>
+<li><p>如果需要使用GPU美颜滤镜，则用同样的方法加上libksygpulive.framework，并且需要添加第三方库GPUImage.framework</p></li>
 <li><p>SDK Cocoapods
-在Podfile中本SDK的条目，并执行了 pod install 之后， 本SDK就已经加入工程中，打开工程的workspace即可</p></li>
+在Podfile中本SDK的条目，并执行了 pod install 之后， 本SDK就已经加入工程中，打开工程的workspace即可。</p></li>
 </ul>
 
 <h2>
-<a id="streamer使用示例" class="anchor" href="#streamer%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Streamer使用示例</h2>
+<a id="sdk使用示例" class="anchor" href="#sdk%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SDK使用示例</h2>
+
+<p>具体可参见KSYLiveDemo工程中的KSYStreamerVC/KSYGPUStreamerVC/KSYStreamerKitVC.</p>
 
 <ul>
-<li>在需要进行推流预览的VC类的实现文件中引入头文件</li>
+<li>KSYStreamerVC<br>
+KSYStreamer的使用示例（使用libksylive时不依赖GPUImage）</li>
+<li>KSYStreamerKitVC<br>
+KSYGPUStreamerKit的使用示例，与KSYStreamer用法一致，仅仅添加了设置美颜接口</li>
+<li><p>KSYGPUStreamerVC 
+KSYGPUStreamer使用示例，可以自由组合采集，滤镜和推流，实现高度定制化的需求</p></li>
+<li><p>在使用libksylive，引入头文件</p></li>
 </ul>
 
 <pre><code>#import &lt;libksylive/libksylive.h&gt;
 </code></pre>
 
+<p>或者使用支持滤镜的 libksygpulive</p>
+
+<pre><code>#import &lt;GPUImage/GPUImage.h&gt;
+#import &lt;libksygpulive/libksygpulive.h&gt;
+#import &lt;libksygpulive/libksygpuimage.h&gt;
+</code></pre>
+
+<h3>
+<a id="入口类" class="anchor" href="#%E5%85%A5%E5%8F%A3%E7%B1%BB" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>入口类</h3>
+
+<p>本SDK提供的入口类如下
+<img src="http://ksvc.github.io/KSYLive_iOS/html/img/sdkClass.png" alt="sdk classes"></p>
+
 <ul>
-<li>SDK 鉴权设置
-使用SDK前, 需要联系金山云获取合法的ak/sk 在开始推流前，需要使用KSYAuthInfo类的setAuthInfo将ak和加密后的sk传入SDK内部, 具体代码见demo中的initKSYAuth方法</li>
-<li>SDK的核心类为<a href="/KSYLive_iOS/html/Classes/KSYStreamer.html">KSYStreamer</a>, 可以在VC中增加 KSYStreamer 的属性, 后续与推流相关的操作大部分都要通过KSYStreamer 来进行</li>
+<li><p>libksylive 的入口类为<a href="http://ksvc.github.io/KSYLive_iOS/html/Classes/KSYStreamer.html">KSYStreamer</a>, 包含了采集和推流的功能，后续与推流相关的操作大部分都要通过KSYStreamer 来进行，比如设置采集和推流的属性，启停预览，启停推流等</p></li>
+<li>
+<p>libksygpulive 的入口类如下</p>
+
+<ul>
+<li>KSYStreamerBase   基础推流类，接受CMSampleBufferRef的音视频数据进行编码推流</li>
+<li>KSYGPUCamera      对GPUImageVideoCamera的封装，负责采集部分的功能</li>
+<li>KSYGPUStreamer    对KSYStreamerBase的封装，对接GPUImage的滤镜输出</li>
+<li>KSYGPUStreamerKit 对KSYGPUCamera和KSYGPUStreamer的封装，对采集，滤镜和推流组装</li>
+</ul>
+</li>
+<li>
+<p>两种使用方式： </p>
+
+<ul>
+<li>简单接口 KSYGPUStreamerKit 与 KSYStreamer类似，打包了采集和推流部分</li>
+<li>进阶接口 KSYGPUCamera+KSYGPUStreamer，自由度比较大，采集和推流模块分离可以自由组合</li>
+</ul>
+</li>
 </ul>
 
-<pre><code>@property KSYStreamer * streamer;
+<p>以下总结使用libksygpulive和使用libksylive中基本推流的几点修改：</p>
+
+<ul>
+<li>依赖的头文件不同，本SDK的头文件分为两个，并且需要在引入GPUImage 之后引入：</li>
+</ul>
+
+<pre><code>#import &lt;GPUImage/GPUImage.h&gt;
+#import &lt;libksygpulive/libksygpulive.h&gt;
+#import &lt;libksygpulive/libksygpuimage.h&gt;
+</code></pre>
+
+<h3>
+<a id="采集参数设置" class="anchor" href="#%E9%87%87%E9%9B%86%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>采集参数设置</h3>
+
+<ul>
+<li>
+<p>设置分辨率</p>
+
+<pre><code> _kit.videoDimension = KSYVideoDimension_16_9__960x540;
+</code></pre>
+
+<p>如果使用KSYGPUStreamerKit/KSYStreamer，可以支持自定义分辨率.</p>
+
+<pre><code>/// 16 : 9 宽高比，1280 x 720 分辨率
+KSYVideoDimension_16_9__1280x720 = 0,
+/// 16 : 9 宽高比，960 x 540 分辨率
+KSYVideoDimension_16_9__960x540,
+
+/// 缩放自定义分辨率 从设备支持的最近分辨率缩放获得, 若设备没有对应宽高比的分辨率，则裁剪后进行缩放
+KSYVideoDimension_UserDefine_Scale,
+/// 裁剪自定义分辨率 从设备支持的最近分辨率裁剪获得
+KSYVideoDimension_UserDefine_Crop,
+/// 注意： 选择缩放自定义分辨率时可能会有额外CPU代价
+</code></pre>
+
+<p>其中KSYVideoDimension_UserDefine_Scale/Crop为可以自定义的分辨率，自定义范围为</p>
+
+<pre><code>- 宽度有效范围[160, 1280]
+- 高度有效范围[ 90,  720], 超出范围会提示参数错误
+</code></pre>
+
+<p>如果使用KSYGPUSteamer,只支持iOS系统定义的AVCaptureSessionPreset*,需要自定义分辨率的话，可以通过添加裁剪和缩放的滤镜         来实现分辨率的改变.</p>
+</li>
+<li>
+<p>设置视频采集帧率</p>
+
+<pre><code>_kit.videoFPS = 15;
+</code></pre>
+
+<p>如果使用KSYGPUStreamerKit/KSYStreamer,可以通过设置 videoFPS 就设定了采集和推流的帧率.
+如果使用KSYGPUSteamer,只设置摄像头的帧率,需要将同一个值在推流参数中再设置一次.</p>
+</li>
+<li>
+<p>设置视频朝向</p>
+
+<pre><code>    UIInterfaceOrientation orien = [[UIApplication sharedApplication] statusBarOrientation];
+    [_kit outputImageOrientation:orien];
+</code></pre>
+
+<p>推流和采集的朝向必须保持一致，建议直接将设备UI的朝向设置为视频的朝向</p>
+</li>
+</ul>
+
+<h3>
+<a id="推流编码参数设置" class="anchor" href="#%E6%8E%A8%E6%B5%81%E7%BC%96%E7%A0%81%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>推流编码参数设置</h3>
+
+<ul>
+<li>
+<p>选择视频编码器，（264软编码，264硬编码，265软编码等）</p>
+
+<pre><code> _kit.streamerBase.videoCodec = KSYVideoCodec_VT264;
+</code></pre>
+</li>
+<li>
+<p>设置视频自适应码率范围</p>
+
+<pre><code>    _kit.streamerBase.enAutoApplyEstimateBW = _btnAutoBw.on;
+    _kit.streamerBase.videoInitBitrate = 1000; // k bit ps
+    _kit.streamerBase.videoMaxBitrate  = 1000; // k bit ps
+    _kit.streamerBase.videoMinBitrate  = 100; // k bit ps
 </code></pre>
 
 <ul>
-<li>创建KSYStreamer 的实例,并初始化, 注意本SDK不支持多实例, 同一时间只能有一个推流类的实例，否则会出现不可预期的问题</li>
+<li>videoMaxBitrate为平均码率上调的上限，即当网络足够好时的目标码率，对应画质最好的情况</li>
+<li>videoMinBitrate为平均码率下调的下限，即当网络太差时，如果再往下调整，画面质量会无法接受</li>
+<li>videoInitBitrate为开始推流时的码率，开始推流后才能根据实际网络情况自动上调或下调</li>
+</ul>
+</li>
+<li>
+<p>设置音频码率</p>
+
+<pre><code>```
+    _kit.streamerBase.audiokBPS        = 48; // k bit ps
+```
+</code></pre>
+</li>
+<li>
+<p>设置采集帧率(使用KSYGPUSteamer才需要)</p>
+
+<pre><code>通过设置 videoFPS 就设定了推流的帧率，一般设置成和采集的一样。
+```
+_gpuStreamer.streamerBase.videoFPS   = _capDev.frameRate;
+```
+</code></pre>
+</li>
 </ul>
 
-<pre><code>_streamer = [[KSYStreamer alloc] initWithDefaultCfg];
-</code></pre>
+<h3>
+<a id="服务器地址" class="anchor" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%B0%E5%9D%80" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>服务器地址</h3>
 
 <ul>
-<li>设置采集和推流参数，主要是对分辨率，帧率等参数进行设置，具体可设置的内容参见KSYStreamer的属性。例如：</li>
+<li>服务器url(需要向相关人员申请，测试地址并不稳定！)：</li>
 </ul>
 
-<pre><code>_streamer.videoDimension = KSYVideoDimension_16_9__640x360;
-
+<pre><code>@property NSURL * hostURL;
+NSString *url = @"rtmp://test.uplive.ksyun.com/live/{streamName}"
+_hostURL      = [[NSURL alloc] initWithString:url];
 </code></pre>
 
-<ul>
-<li>设置消息通知的接收函数</li>
-</ul>
+<h3>
+<a id="采集推流状态" class="anchor" href="#%E9%87%87%E9%9B%86%E6%8E%A8%E6%B5%81%E7%8A%B6%E6%80%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>采集推流状态</h3>
+
+<p>由于对摄像头的操作和启停推流都与设备交互，可能会出现比较耗时的情况，相关API设计为异步接口，比如调用启动推流接口API后，并不是API返回后就能知道是否连接成功，而是需要通过状态变化回调，来查询执行的结果。本SDK提供如下表列出的通知，通过NSNotificationCenter注册接收相应的通知：    </p>
 
 <table>
 <thead>
@@ -173,6 +349,7 @@
 <th>通知名称</th>
 <th>通知说明</th>
 <th>相关属性</th>
+<th>相关类</th>
 </tr>
 </thead>
 <tbody>
@@ -180,62 +357,99 @@
 <td>KSYCaptureStateDidChangeNotification</td>
 <td>采集设备状态变化通知</td>
 <td>captureState</td>
+<td>KSYStreamer, KSYGPUStreamerKit</td>
 </tr>
 <tr>
 <td>KSYStreamStateDidChangeNotification</td>
 <td>推流状态变化通知</td>
 <td>streamState, streamErrorCode</td>
+<td>KSYStreamer, KSYStreamerBase</td>
 </tr>
 <tr>
 <td>KSYNetStateEventNotification</td>
 <td>网络事件发生通知</td>
 <td>netStateCode</td>
+<td>KSYStreamer, KSYStreamerBase</td>
 </tr>
 </tbody>
 </table>
 
-<p>比如 当采集设备的状态发生变化时，对应的接收回调函数会被调用，通过_streamer.captureState属性,可查询到新的状态
-其中如果推流状态变为 <a href="/KSYLive_iOS/html/Constants/KSYStreamState.html">KSYStreamStateError</a>,需要通过<a href="/KSYLive_iOS/html/Constants/KSYStreamErrorCode.html">streamErrorCode</a> 具体查询其错误原因</p>
-
-<ul>
-<li>开始/停止预览
-通过如下接口启动和停止预览，当启动预览时，需要将显示预览的view传入到SDK中</li>
-</ul>
-
-<pre><code>[_streamer startPreview: self.view];
-//....
-[_streamer stopPreview];
-</code></pre>
-
-<p>在调用这一组接口后，对应操作开始和结束时会有KSYCaptureStateDidChangeNotification的状态通知
-当采集设备的权限被用户禁用时，会进入KSYCaptureStateDevAuthDenied状态</p>
-
-<ul>
-<li>开始/停止推流, 开始推流时, 需要将推流的完整URL作为参数传入, 比如rtmp://xxx.xxx.xxx/appname/streamkey </li>
-</ul>
-
-<pre><code>[_streamer startStream:_hostURL];
-//....
-[_streamer stopStream];
-</code></pre>
-
-<p>在调用这一组接口后，对应操作开始和结束时会有 KSYStreamStateDidChangeNotification 的状态通知，
-进入KSYStreamStateConnected 状态，表明推流成功；</p>
-
-<h3>
-<a id="其他操作" class="anchor" href="#%E5%85%B6%E4%BB%96%E6%93%8D%E4%BD%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>其他操作</h3>
-
-<pre><code>[_streamer switchCamera]; // 在前后摄像头之间切换
-[_streamer toggleTorch ]; // 开关闪关灯状态
-</code></pre>
-
-<h3>
-<a id="状态监控" class="anchor" href="#%E7%8A%B6%E6%80%81%E7%9B%91%E6%8E%A7" aria-hidden="true"><span class="octicon octicon-link"></span></a>状态监控</h3>
+<p>当采集设备的状态发生变化时，对应的接收回调函数会被调用，通过_kit.captureState属性,可查询到新的状态。
+当推流状态发生变化，则在收到通知回调后，查询streamState查询新状态。其中如果streamState变为 <a href="http://ksvc.github.io/KSYLive_iOS/html/Constants/KSYStreamState.html">KSYStreamStateError</a>,需要通过<a href="http://ksvc.github.io/KSYLive_iOS/html/Constants/KSYStreamErrorCode.html">streamErrorCode</a> 具体查询其错误原因
+使用KSYGPUCamera时，为了保持与GPUImage一致，没有采用异步接口，不提供captureState状态。</p>
 
 <p>如果需要对推流状态进行监控，可以设置一个每秒刷新一次的timer，计算出网络发送速度（每秒发送的字节数）和视频编码速度（每秒编码的帧数）</p>
 
+<h3>
+<a id="启停预览" class="anchor" href="#%E5%90%AF%E5%81%9C%E9%A2%84%E8%A7%88" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>启停预览</h3>
+
+<ul>
+<li>通过如下接口启动和停止预览，当启动预览时，需要将显示预览的view传入到SDK中</li>
+</ul>
+
+<pre><code>[_kit startPreview: self.view];
+//....
+[_kit stopPreview];
+</code></pre>
+
+<p>注意：当采集设备的权限被用户禁用时，会进入KSYCaptureStateDevAuthDenied状态</p>
+
+<h3>
+<a id="启停推流" class="anchor" href="#%E5%90%AF%E5%81%9C%E6%8E%A8%E6%B5%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>启停推流</h3>
+
+<ul>
+<li>开始/停止推流, 在这之前必须要先启动预览，开始推流时, 需要将推流的完整URL作为参数传入, 比如rtmp://xxx.xxx.xxx/appname/streamkey </li>
+</ul>
+
+<pre><code>[_kit startStream:_hostURL];
+//....
+[_kit stopStream];
+</code></pre>
+
+<p>进入KSYStreamStateConnected 状态，表明推流成功；</p>
+
+<p>注意：所有的对应操作开始和结束时会有KSYCaptureStateDidChangeNotification的状态通知</p>
+
+<h3>
+<a id="美颜滤镜" class="anchor" href="#%E7%BE%8E%E9%A2%9C%E6%BB%A4%E9%95%9C" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>美颜滤镜</h3>
+
+<p>本SDK中的美颜滤镜依赖第三方开源库GPUImage，可以方便简单的进行对接，也可以很方便的增加自定义的美颜滤镜。</p>
+
+<ul>
+<li>KSYGPUStreamerKit增加了setupFilter的方法，创建出美颜滤镜后，通过该方法传入SDK，预览和推流的图像就是应用了该滤镜后的图像</li>
+</ul>
+
+<pre><code>    @property GPUImageFilter     * filter;
+    _filter = [[KSYGPUBeautifyPlusFilter alloc] init];
+    [_kit setupFilter:_filter];
+</code></pre>
+
+<ul>
+<li>使用KSYGPUStreamer，需要开发者自行将 采集，滤镜，推流，预览等部分组装起来，自由度比较大
+
+<ul>
+<li>通过采集类KSYGPUCamera设置摄像头参数</li>
+<li>通过GPUImageFilter来实现GPU滤镜图像处理</li>
+<li>通过KSYGPUStreamer实现编码推流</li>
+<li>通过GPUImageView实现画面预览</li>
+<li>以上都是符合GPUImage框架的部件，通过各自的 addTarget/removeTarget,来实现连接组装和拆解</li>
+</ul>
+</li>
+</ul>
+
+<pre><code>    [_capDev addTarget:_cropfilter];
+    [_cropfilter addTarget:_filter];
+    [_filter  addTarget:_preview];
+    [_filter  addTarget:_gpuStreamer];
+</code></pre>
+
+<p>以上例子中有滤镜级联，其中_cropfilter只有在需要对图像进行裁剪时才添加，比如摄像头设置为16:9的分辨率，如果需要在ipad上显示4:3的分辨率，就可以用GPUImageCropFilter来进行裁剪。</p>
+
+<pre><code> [[GPUImageCropFilter alloc] initWithCropRegion:rect];
+</code></pre>
+
 <h2>
-<a id="mediaplayer-使用示例" class="anchor" href="#mediaplayer-%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>MediaPlayer 使用示例</h2>
+<a id="播放器使用示例" class="anchor" href="#%E6%92%AD%E6%94%BE%E5%99%A8%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>播放器使用示例</h2>
 
 <p>请见github库：<a href="https://github.com/ksvc/KSYMediaPlayer_iOS.git">https://github.com/ksvc/KSYMediaPlayer_iOS.git</a></p>
 
