@@ -14,7 +14,7 @@
 		<div class="container" class="hide-in-xcode">
 			
 			<h1 id="library-title">
-				<a href="../index.html">libksygpulive </a>
+				<a href="../index.html">KSYLive_iOS </a>
 			</h1>
 
 			<p id="developer-home">
@@ -72,9 +72,15 @@
 		
 		<option value="//api/name/hostURL">hostURL</option>
 		
+		<option value="//api/name/logBlock">logBlock</option>
+		
+		<option value="//api/name/maxKeyInterval">maxKeyInterval</option>
+		
 		<option value="//api/name/netStateCode">netStateCode</option>
 		
 		<option value="//api/name/rtmpHostIP">rtmpHostIP</option>
+		
+		<option value="//api/name/shouldEnableKSYStatModule">shouldEnableKSYStatModule</option>
 		
 		<option value="//api/name/streamErrorCode">streamErrorCode</option>
 		
@@ -102,7 +108,13 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/enableReverb:">- enableReverb:</option>
+		
+		<option value="//api/name/getKSYVersion">- getKSYVersion</option>
+		
 		<option value="//api/name/initWithDefaultCfg">- initWithDefaultCfg</option>
+		
+		<option value="//api/name/muteStreame:">- muteStreame:</option>
 		
 		<option value="//api/name/processAudioSampleBuffer:">- processAudioSampleBuffer:</option>
 		
@@ -113,6 +125,8 @@
 		<option value="//api/name/startStream:">- startStream:</option>
 		
 		<option value="//api/name/stopStream">- stopStream</option>
+		
+		<option value="//api/name/takePhotoWithQuality:fileName:">- takePhotoWithQuality:fileName:</option>
 		
 	</optgroup>
 	
@@ -177,6 +191,47 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/getKSYVersion" title="getKSYVersion"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getKSYVersion">&ndash;&nbsp;getKSYVersion</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取SDK版本号</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getKSYVersion</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/hostURL" title="hostURL"></a>
 	<h3 class="method-title"><code><a href="#//api/name/hostURL">&nbsp;&nbsp;hostURL</a></code>
 </h3>
@@ -237,7 +292,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>视频帧率</p>
+				<p>视频帧率 默认:15</p>
 			</div>
 			
 		    
@@ -283,7 +338,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>视频编码器</p>
+				<p>视频编码器 默认为264软编码</p>
 			</div>
 			
 		    
@@ -338,7 +393,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>视频编码起始码率（单位:kbps）</p>
+				<p>视频编码起始码率（单位:kbps, 默认:500）</p>
 			</div>
 			
 		    
@@ -393,7 +448,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>视频编码最高码率（单位:kbps）</p>
+				<p>视频编码最高码率（单位:kbps, 默认:800）</p>
 			</div>
 			
 		    
@@ -448,7 +503,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>视频编码最低码率（单位:kbps）</p>
+				<p>视频编码最低码率（单位:kbps, 默认:200）</p>
 			</div>
 			
 		    
@@ -480,6 +535,52 @@
 					
 				</ul>
 			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/maxKeyInterval" title="maxKeyInterval"></a>
+	<h3 class="method-title"><code><a href="#//api/name/maxKeyInterval">&nbsp;&nbsp;maxKeyInterval</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>最大关键帧间隔（单位:秒, 默认:3）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) float maxKeyInterval</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>即GOP长度 画面静止时,隔n秒插入一个关键帧</p>
+			</div>
+			
+
+			
+
 			
 
 			
@@ -549,7 +650,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>启用自动调整码率</p>
+				<p>启用自动调整码率 默认开启</p>
 			</div>
 			
 		    
@@ -566,7 +667,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>默认为关闭自动调整码率,开始预览前设置有效</p>
+				<p>自动根据网络状况调整码率,开始预览前设置有效</p>
 			</div>
 			
 
@@ -766,15 +867,14 @@
 				<p>初始化，将下列属性设置为默认值</p>
 
 <ul>
-<li>_videoDimension   = KSYVideoDimension_Default;</li>
 <li>_<a href="#//api/name/videoFPS">videoFPS</a>         = 15;</li>
 <li><em><a href="#//api/name/videoCodec">videoCodec</a>       = <a href="../Constants/KSYVideoCodec.html">KSYVideoCodec</a></em>X264;</li>
-<li>_<a href="#//api/name/audiokBPS">audiokBPS</a>        = 48;</li>
-<li>_<a href="#//api/name/videoInitBitrate">videoInitBitrate</a> = 600;</li>
+<li>_<a href="#//api/name/audiokBPS">audiokBPS</a>        = 32;</li>
+<li>_<a href="#//api/name/videoInitBitrate">videoInitBitrate</a> = 500;</li>
 <li>_<a href="#//api/name/videoMaxBitrate">videoMaxBitrate</a>  = 800;</li>
 <li>_<a href="#//api/name/videoMinBitrate">videoMinBitrate</a>  = 200;</li>
 </ul>
-<div class="warning"><p><strong>Warning:</strong> KSYStreamer只支持单实例推流，构造多个实例会出现异常</p></div>
+<div class="warning"><p><strong>Warning:</strong> KSYStreamerBase只支持单实例推流，构造多个实例会出现异常</p></div>
 			</div>
 			
 
@@ -1487,6 +1587,210 @@
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/muteStreame:" title="muteStreame:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/muteStreame:">&ndash;&nbsp;muteStreame:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>静音推流</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)muteStreame:(BOOL)<em>bMute</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>bMute</code></th>
+						<td><p>YES / ON</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/enableReverb:" title="enableReverb:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enableReverb:">&ndash;&nbsp;enableReverb:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)enableReverb:(int)<em>level</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shouldEnableKSYStatModule" title="shouldEnableKSYStatModule"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shouldEnableKSYStatModule">&nbsp;&nbsp;shouldEnableKSYStatModule</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>收集网络相关状态的日志，默认开启</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL shouldEnableKSYStatModule</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>可开关</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logBlock" title="logBlock"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logBlock">&nbsp;&nbsp;logBlock</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取Streamer中与网络相关的日志</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) void ( ^ ) ( NSString *logJson ) logBlock</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>相关字段说明请联系金山云技术支持</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/takePhotoWithQuality:fileName:" title="takePhotoWithQuality:fileName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/takePhotoWithQuality:fileName:">&ndash;&nbsp;takePhotoWithQuality:fileName:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>截图功能，目前只支持jpg格式
+@param    设置图像的压缩比例
+@param    图片的文件名</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)takePhotoWithQuality:(CGFloat)<em>jpegCompressionQuality</em> fileName:(NSString *)<em>filename</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -1500,7 +1804,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Kingsoft. All rights reserved. Updated: 2016-02-29</p>
+						<p class="copyright">Copyright &copy; 2016 Kingsoft. All rights reserved. Updated: 2016-05-30</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

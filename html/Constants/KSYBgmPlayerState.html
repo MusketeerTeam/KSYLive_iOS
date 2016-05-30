@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KSYStreamState Constants Reference</title>
+	<title>KSYBgmPlayerState Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,7 +59,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KSYStreamState Constants Reference</h1>
+					<h1 class="title">KSYBgmPlayerState Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -75,7 +75,7 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KSYStreamState</h3>
+                    <h3 class="subsubtitle method-title">KSYBgmPlayerState</h3>
                     
 					
 					
@@ -83,17 +83,21 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSUInteger, KSYStreamState ) {<br>
+                        <code>typedef NS_ENUM(NSUInteger, KSYBgmPlayerState ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">KSYStreamStateIdle</a> = 0,<br>
+                            &nbsp;&nbsp; <a href="">KSYBgmPlayerStateInit</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">KSYStreamStateConnecting</a>,<br>
+                            &nbsp;&nbsp; <a href="">KSYBgmPlayerStateStarting</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">KSYStreamStateConnected</a>,<br>
+                            &nbsp;&nbsp; <a href="">KSYBgmPlayerStateStopped</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">KSYStreamStateDisconnecting</a>,<br>
+                            &nbsp;&nbsp; <a href="">KSYBgmPlayerStatePlaying</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">KSYStreamStateError</a>,<br>
+                            &nbsp;&nbsp; <a href="">KSYBgmPlayerStatePaused</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KSYBgmPlayerStateError</a>,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KSYBgmPlayerStateInterrupted</a>,<br>
                             
                             };</code>
                     
@@ -103,11 +107,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KSYStreamStateIdle"></a><code>KSYStreamStateIdle</code></dt>
+                            <dt><a name="" title="KSYBgmPlayerStateInit"></a><code>KSYBgmPlayerStateInit</code></dt>
 <dd>
 
 
-<p>初始化时状态为空闲</p>
+<p>初始状态</p>
 
 
 
@@ -120,11 +124,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KSYStreamStateConnecting"></a><code>KSYStreamStateConnecting</code></dt>
+                            <dt><a name="" title="KSYBgmPlayerStateStarting"></a><code>KSYBgmPlayerStateStarting</code></dt>
 <dd>
 
 
-<p>连接中</p>
+<p>背景音正在播放</p>
 
 
 
@@ -137,11 +141,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KSYStreamStateConnected"></a><code>KSYStreamStateConnected</code></dt>
+                            <dt><a name="" title="KSYBgmPlayerStateStopped"></a><code>KSYBgmPlayerStateStopped</code></dt>
 <dd>
 
 
-<p>已连接</p>
+<p>背景音停止</p>
 
 
 
@@ -154,11 +158,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KSYStreamStateDisconnecting"></a><code>KSYStreamStateDisconnecting</code></dt>
+                            <dt><a name="" title="KSYBgmPlayerStatePlaying"></a><code>KSYBgmPlayerStatePlaying</code></dt>
 <dd>
 
 
-<p>断开连接中</p>
+<p>背景音正在播放</p>
 
 
 
@@ -171,11 +175,45 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KSYStreamStateError"></a><code>KSYStreamStateError</code></dt>
+                            <dt><a name="" title="KSYBgmPlayerStatePaused"></a><code>KSYBgmPlayerStatePaused</code></dt>
 <dd>
 
 
-<p>推流出错</p>
+<p>背景音暂停</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KSYTypeDef.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KSYBgmPlayerStateError"></a><code>KSYBgmPlayerStateError</code></dt>
+<dd>
+
+
+<p>背景音播放出错</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KSYTypeDef.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KSYBgmPlayerStateInterrupted"></a><code>KSYBgmPlayerStateInterrupted</code></dt>
+<dd>
+
+
+<p>背景音被打断</p>
 
 
 
