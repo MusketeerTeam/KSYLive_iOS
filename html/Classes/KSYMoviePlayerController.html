@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -56,11 +58,15 @@
 		
 		<option value="//api/name/audioDataBlock">audioDataBlock</option>
 		
+		<option value="//api/name/bInterruptOtherAudio">bInterruptOtherAudio</option>
+		
 		<option value="//api/name/bufferEmptyCount">bufferEmptyCount</option>
 		
 		<option value="//api/name/bufferEmptyDuration">bufferEmptyDuration</option>
 		
 		<option value="//api/name/bufferTimeMax">bufferTimeMax</option>
+		
+		<option value="//api/name/clientIP">clientIP</option>
 		
 		<option value="//api/name/contentURL">contentURL</option>
 		
@@ -69,6 +75,8 @@
 		<option value="//api/name/duration">duration</option>
 		
 		<option value="//api/name/loadState">loadState</option>
+		
+		<option value="//api/name/localDNSIP">localDNSIP</option>
 		
 		<option value="//api/name/logBlock">logBlock</option>
 		
@@ -98,9 +106,11 @@
 		
 		<option value="//api/name/shouldMute">shouldMute</option>
 		
-		<option value="//api/name/shouldUseHWCodec">shouldUseHWCodec</option>
+		<option value="//api/name/superFastPlay">superFastPlay</option>
 		
 		<option value="//api/name/videoDataBlock">videoDataBlock</option>
+		
+		<option value="//api/name/videoDecoderMode">videoDecoderMode</option>
 		
 		<option value="//api/name/view">view</option>
 		
@@ -112,6 +122,8 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/getCurrentPts">- getCurrentPts</option>
+		
 		<option value="//api/name/getMetadata">- getMetadata</option>
 		
 		<option value="//api/name/getVersion">- getVersion</option>
@@ -122,7 +134,7 @@
 		
 		<option value="//api/name/reload:is_flush:">- reload:is_flush:</option>
 		
-		<option value="//api/name/setTimeout:">- setTimeout:</option>
+		<option value="//api/name/setTimeout:readTimeout:">- setTimeout:readTimeout:</option>
 		
 		<option value="//api/name/setVolume:rigthVolume:">- setVolume:rigthVolume:</option>
 		
@@ -161,6 +173,14 @@
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>KSYMoviePlayerController</p>
+					</div>
+					
+					
 
 					
 					
@@ -796,7 +816,7 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>可开关</p>
+				<p>可开关</p><div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
 			</div>
 			
 
@@ -847,9 +867,13 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>获取信息
-* 监听MPMovieNaturalSizeAvailableNotification
-* 播放过程中，宽高信息可能会产生更改</p>
+				<p>获取信息</p>
+
+<ul>
+<li>监听MPMovieNaturalSizeAvailableNotification</li>
+<li>播放过程中，宽高信息可能会产生更改</li>
+</ul>
+
 			</div>
 			
 
@@ -951,9 +975,13 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div><p>当buffer为负数时，关闭直播追赶。
-* 该属性仅对直播流有效；
-* 默认值为2秒。</p>
+				<p>当buffer为负数时，关闭直播追赶。</p>
+
+<ul>
+<li>该属性仅对直播流有效；</li>
+<li>默认值为2秒。</li>
+</ul>
+<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
 			</div>
 			
 
@@ -1004,13 +1032,13 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div><p>已经加载的数据大小，单位是兆。</p>
+				<p>已经加载的数据大小，单位是兆。</p>
 
 <ul>
 <li>已经加载的全部数据大小，包括音频和视频。</li>
 <li>数据包括已经播放的，和当前的cache数据。</li>
 </ul>
-
+<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
 			</div>
 			
 
@@ -1061,14 +1089,14 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div><p>当buffer为空时，开始统计。单位为秒。</p>
+				<p>当buffer为空时，开始统计。单位为秒。</p>
 
 <ul>
 <li>当MPMoviePlayerLoadStateDidChangeNotification 通知发起；</li>
 <li>MPMovieLoadState状态为MPMovieLoadStateStalled 开始计时；</li>
 <li>MPMovieLoadState状态为MPMovieLoadStatePlayable 或者 MPMovieLoadStatePlaythroughOK时，结束计时；</li>
 </ul>
-
+<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
 			</div>
 			
 
@@ -1119,13 +1147,13 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div><p>当buffer为空时，统计一次，统计的条件为</p>
+				<p>当buffer为空时，统计一次，统计的条件为</p>
 
 <ul>
 <li>当MPMoviePlayerLoadStateDidChangeNotification 通知发起</li>
 <li>MPMovieLoadState 状态为MPMovieLoadStateStalled</li>
 </ul>
-
+<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
 			</div>
 			
 
@@ -1176,7 +1204,109 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div><p>当收到prepared后，即可以查询当前连接的视频流server ip.</p>
+				<p>当收到prepared后，即可以查询当前连接的视频流server ip</p><div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYMoviePlayerController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/clientIP" title="clientIP"></a>
+	<h3 class="method-title"><code><a href="#//api/name/clientIP">&nbsp;&nbsp;clientIP</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>客户端出口IP</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *clientIP</code></div>
+
+		    
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>Available in KSYMoviePlayerController 1.5.0.1 and later.</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>当收到prepared后，即可以查询客户端的出口IP</p><div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYMoviePlayerController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/localDNSIP" title="localDNSIP"></a>
+	<h3 class="method-title"><code><a href="#//api/name/localDNSIP">&nbsp;&nbsp;localDNSIP</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>客户端LocalDNSIP</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *localDNSIP</code></div>
+
+		    
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>Available in KSYMoviePlayerController 1.5.0.1 and later.</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>当收到prepared后，即可以查询客户端的LocalDNSIP</p><div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
 			</div>
 			
 
@@ -1227,7 +1357,7 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div><p>在播放过程中，即可以查询当前连接的视频流qos信息.</p>
+				<p>在播放过程中，即可以查询当前连接的视频流qos信息</p><div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
 			</div>
 			
 
@@ -1334,8 +1464,12 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div><p>默认是开启
-* 只在<a href="../Protocols/KSYMediaPlayback.html#//api/name/prepareToPlay">prepareToPlay</a> 调用前设置生效；</p>
+				<p>默认是关闭</p>
+
+<ul>
+<li>只在<a href="../Protocols/KSYMediaPlayback.html#//api/name/prepareToPlay">prepareToPlay</a> 调用前设置生效；</li>
+</ul>
+<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
 			</div>
 			
 
@@ -1353,8 +1487,8 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/shouldUseHWCodec" title="shouldUseHWCodec"></a>
-	<h3 class="method-title"><code><a href="#//api/name/shouldUseHWCodec">&nbsp;&nbsp;shouldUseHWCodec</a></code>
+	<a name="//api/name/videoDecoderMode" title="videoDecoderMode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/videoDecoderMode">&nbsp;&nbsp;videoDecoderMode</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1369,7 +1503,7 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL shouldUseHWCodec</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) MPMovieVideoDecoderMode videoDecoderMode</code></div>
 
 		    
 			
@@ -1386,8 +1520,12 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>默认是关闭
-* 只在<a href="../Protocols/KSYMediaPlayback.html#//api/name/prepareToPlay">prepareToPlay</a> 调用前设置生效；</p>
+				<p>如果系统版本高于8.0，默认开启硬件解码；否则，默认使用软件解码</p>
+
+<ul>
+<li>只在<a href="../Protocols/KSYMediaPlayback.html#//api/name/prepareToPlay">prepareToPlay</a> 调用前设置生效</li>
+</ul>
+<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
 			</div>
 			
 
@@ -1438,8 +1576,7 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>默认不静音
-* 只在<a href="../Protocols/KSYMediaPlayback.html#//api/name/prepareToPlay">prepareToPlay</a> 调用前设置生效；</p>
+				<p>默认不静音，在播放过程中设置生效</p><div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
 			</div>
 			
 
@@ -1490,9 +1627,13 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>默认不循环
-* 只在<a href="../Protocols/KSYMediaPlayback.html#//api/name/prepareToPlay">prepareToPlay</a> 调用前设置生效；
-只有点播生效,直播场景请勿设置</p>
+				<p>默认不循环</p>
+
+<ul>
+<li>只在<a href="../Protocols/KSYMediaPlayback.html#//api/name/prepareToPlay">prepareToPlay</a> 调用前设置生效；</li>
+<li>只有点播生效,直播场景请勿设置</li>
+</ul>
+<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
 			</div>
 			
 
@@ -1541,9 +1682,23 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>调用<a href="../Protocols/KSYMediaPlayback.html#//api/name/prepareToPlay">prepareToPlay</a>方法之前设置生效，回调数据为同步完成后的数据</p><div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
+			</div>
+			
 
 			
 
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Blocks/KSYPlyVideoDataBlock.html">KSYPlyVideoDataBlock</a></p></code></li>
+					
+				</ul>
+			</div>
 			
 
 			
@@ -1587,9 +1742,23 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>调用<a href="../Protocols/KSYMediaPlayback.html#//api/name/prepareToPlay">prepareToPlay</a>方法之前设置生效，回调数据为同步完成后的数据</p><div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
+			</div>
+			
 
 			
 
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Blocks/KSYPlyAudioDataBlock.html">KSYPlyAudioDataBlock</a></p></code></li>
+					
+				</ul>
+			</div>
 			
 
 			
@@ -1613,7 +1782,7 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			
 			<div class="method-subsection brief-description">
-				<p>指定逆时针旋转角度，只能是0/90/180/270, 不符合上述值不进行旋转。</p>
+				<p>指定逆时针旋转角度，只能是0/90/180/270, 不符合上述值不进行旋转</p>
 			</div>
 			
 		    
@@ -1653,8 +1822,8 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/setTimeout:" title="setTimeout:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setTimeout:">&ndash;&nbsp;setTimeout:</a></code>
+	<a name="//api/name/superFastPlay" title="superFastPlay"></a>
+	<h3 class="method-title"><code><a href="#//api/name/superFastPlay">&nbsp;&nbsp;superFastPlay</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1664,14 +1833,137 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			
 			<div class="method-subsection brief-description">
-				<p>timeout指定拉流超时时间,单位是秒。</p>
+				<p>快速播放</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setTimeout:(int)<em>timeout</em></code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL superFastPlay</code></div>
 
 		    
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>Available in KSYMoviePlayerController 1.5.2 and later.</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>默认不快速播放</p>
+
+<ul>
+<li>非固定倍速下的快速播放，而是全速将解码器中的数据显示出来</li>
+<li>当播放文件存在音频时该功能生效；</li>
+<li>播放前或者播放过程中均可配置；</li>
+<li>开启快速播放后，不在输出声音，但是audioDataBlock中依然会上抛pcm数据</li>
+<li>开启快速播放后，可能会导致播放器不停的进入/结束缓冲状态；</li>
+</ul>
+<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYMoviePlayerController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/bInterruptOtherAudio" title="bInterruptOtherAudio"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bInterruptOtherAudio">&nbsp;&nbsp;bInterruptOtherAudio</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>是否打断其他后台的音乐播放</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL bInterruptOtherAudio</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>也可以理解为是否允许和其他音频同时播放</p><p>YES:开始播放时，会打断其他的后台播放音频，也会被其他音频播放打断</p><p>NO: 可以与其他后台播放共存，相互之间不会被打断</p><p>默认为YES</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYMoviePlayerController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setTimeout:readTimeout:" title="setTimeout:readTimeout:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setTimeout:readTimeout:">&ndash;&nbsp;setTimeout:readTimeout:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>timeout指定拉流超时时间,单位是秒</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setTimeout:(int)<em>prepareTimeout</em> readTimeout:(int)<em>readTimeout</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>prepareTimeout</code></th>
+						<td><p>建立链接超时时间，默认值是10秒</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>readTimeout</code></th>
+						<td><p>拉流超时时间，默认值是30秒</p></td>
+					</tr>
+				
+				</table>
+			</div>
 			
 
 			
@@ -1686,8 +1978,7 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口
-* 默认值为30秒。</p></div>
+				<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
 			</div>
 			
 
@@ -1716,7 +2007,7 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			
 			<div class="method-subsection brief-description">
-				<p>setVolume指定播放器输出音量。</p>
+				<p>setVolume指定播放器输出音量</p>
 			</div>
 			
 		    
@@ -1737,10 +2028,14 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 					<tr>
 						<th scope="row" class="argument-name"><code>rightVolume</code></th>
 						<td><p>right volume scalar [0~1.0f]
-@discussion
-1.输入参数超出范围将失效
-2.输出到speaker时需同时设置左右音量为有效值
-    如：leftVolume ＝ rightVolume ＝ 0.5f</p></td>
+@discussion</p>
+
+<ul>
+<li>输入参数超出范围将失效</li>
+<li>输出到speaker时需同时设置左右音量为有效值
+  如：leftVolume ＝ rightVolume ＝ 0.5f</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -1788,7 +2083,7 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			
 			<div class="method-subsection brief-description">
-				<p>获取sdk版本。</p>
+				<p>获取sdk版本</p>
 			</div>
 			
 		    
@@ -1839,7 +2134,7 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			
 			<div class="method-subsection brief-description">
-				<p>获取播放流版本。</p>
+				<p>获取播放Meta信息</p>
 			</div>
 			
 		    
@@ -1861,14 +2156,15 @@ MPMovieScalingModeFill        // 满屏填充，与原始视频比例不一致
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口
-@discussion
-<em>收到MPMediaPlaybackIsPreparedToPlayDidChangeNotification通知后才能获取到数据
-</em>暂时支持的查询包括
-kKSYPLYFormat
-kKSYPLYHttpFirstDataTime
-kKSYPLYHttpConnectTime
-kKSYPLYHttpAnalyzeDns</p></div>
+				<p>收到MPMediaPlaybackIsPreparedToPlayDidChangeNotification通知后才能获取到数据</p><p>暂时支持的查询包括</p>
+
+<ul>
+<li>kKSYPLYFormat</li>
+<li>kKSYPLYHttpFirstDataTime</li>
+<li>kKSYPLYHttpConnectTime</li>
+<li>kKSYPLYHttpAnalyzeDns</li>
+</ul>
+<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
 			</div>
 			
 
@@ -1976,13 +2272,13 @@ kKSYPLYHttpAnalyzeDns</p></div>
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>is_flush</code></th>
-						<td><p>是否清除上一个url的缓冲区内容，该值为FALSE不清除，为TRUE则清除</p></td>
+						<th scope="row" class="argument-name"><code>aUrl</code></th>
+						<td><p>视频播放地址，该地址可以是本地地址或者服务器地址.如果为nil，则使用前一次播放地址</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>url</code></th>
-						<td><p>视频播放地址，该地址可以是本地地址或者服务器地址.如果为nil，则使用前一次播放地址。</p></td>
+						<th scope="row" class="argument-name"><code>is_flush</code></th>
+						<td><p>是否清除上一个url的缓冲区内容，该值为FALSE不清除，为TRUE则清除</p></td>
 					</tr>
 				
 				</table>
@@ -2001,12 +2297,67 @@ kKSYPLYHttpAnalyzeDns</p></div>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div><p>调用场景如下：
-1. 当播放器调用方发现卡顿时，可以主动调用。
-2. 当估计出更优质的拉流ip时，可以主动调用。
-3. 当发生WiFi/3G网络切换时，可以主动调用。
-4. 当播放器回调体现播放完全时，可以主动调用。
-5. 播放器SDK不会自动调用reload功能。</p>
+				<p>调用场景如下：</p>
+
+<ul>
+<li>当播放器调用方发现卡顿时，可以主动调用</li>
+<li>当估计出更优质的拉流ip时，可以主动调用</li>
+<li>当发生WiFi/3G网络切换时，可以主动调用</li>
+<li>当播放器回调体现播放完成时，可以主动调用</li>
+<li>播放器SDK不会自动调用reload功能</li>
+</ul>
+<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYMoviePlayerController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getCurrentPts" title="getCurrentPts"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getCurrentPts">&ndash;&nbsp;getCurrentPts</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取当前播放的pts</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSTimeInterval)getCurrentPts</code></div>
+
+		    
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>Available in KSYMoviePlayerController 1.5.0.0 and later.</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> 该方法由金山云引入，不是原生系统接口</p></div>
 			</div>
 			
 
@@ -2036,10 +2387,10 @@ kKSYPLYHttpAnalyzeDns</p></div>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Kingsoft. All rights reserved. Updated: 2016-05-30</p>
+						<p class="copyright">Copyright &copy; 2016 Kingsoft. All rights reserved. Updated: 2016-08-02</p>
 						
 						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>

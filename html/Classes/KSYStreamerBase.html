@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -56,7 +56,13 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/audioCodec">audioCodec</option>
+		
 		<option value="//api/name/audiokBPS">audiokBPS</option>
+		
+		<option value="//api/name/bWithAudio">bWithAudio</option>
+		
+		<option value="//api/name/bWithVideo">bWithVideo</option>
 		
 		<option value="//api/name/droppedVideoFrames">droppedVideoFrames</option>
 		
@@ -110,9 +116,21 @@
 		
 		<option value="//api/name/enableReverb:">- enableReverb:</option>
 		
+		<option value="//api/name/getCurKSYStreamErrorCodeName">- getCurKSYStreamErrorCodeName</option>
+		
+		<option value="//api/name/getCurStreamStateName">- getCurStreamStateName</option>
+		
+		<option value="//api/name/getKSYStreamErrorCodeName:">- getKSYStreamErrorCodeName:</option>
+		
 		<option value="//api/name/getKSYVersion">- getKSYVersion</option>
 		
+		<option value="//api/name/getSnapshotWithCompletion:">- getSnapshotWithCompletion:</option>
+		
+		<option value="//api/name/getStreamStateName:">- getStreamStateName:</option>
+		
 		<option value="//api/name/initWithDefaultCfg">- initWithDefaultCfg</option>
+		
+		<option value="//api/name/isStreaming">- isStreaming</option>
 		
 		<option value="//api/name/muteStreame:">- muteStreame:</option>
 		
@@ -170,10 +188,6 @@
 <li>支持 RTMP 协议直播推流;</li>
 </ul>
 
-
-<h2>版本信息</h2>
-
-<p><strong>Version</strong>: 1.0</p>
 
 <p><strong>Found</strong>: 2015-10-15</p>
 					</div>
@@ -367,6 +381,61 @@
 				<ul>
 					
 					<li><code><p><a href="../Constants/KSYVideoCodec.html">KSYVideoCodec</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/audioCodec" title="audioCodec"></a>
+	<h3 class="method-title"><code><a href="#//api/name/audioCodec">&nbsp;&nbsp;audioCodec</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>音频编码器 (默认为AAC-HE)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) KSYAudioCodec audioCodec</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>audio codec used for encode</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Constants/KSYAudioCodec.html">KSYAudioCodec</a></p></code></li>
 					
 				</ul>
 			</div>
@@ -685,6 +754,88 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/bWithVideo" title="bWithVideo"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bWithVideo">&nbsp;&nbsp;bWithVideo</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>是否处理视频的图像数据 (默认YES)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (atomic, assign) BOOL bWithVideo</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/bWithAudio" title="bWithAudio"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bWithAudio">&nbsp;&nbsp;bWithAudio</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>是否处理音频数据 (默认YES)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (atomic, assign) BOOL bWithAudio</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/streamState" title="streamState"></a>
 	<h3 class="method-title"><code><a href="#//api/name/streamState">&nbsp;&nbsp;streamState</a></code>
 </h3>
@@ -717,6 +868,88 @@
 * KSYStreamStateDidChangeNotification 当推流工作状态发生变化时提供通知
 * 收到通知后，通过本属性查询新的状态，并作出相应的动作</p>
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getStreamStateName:" title="getStreamStateName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getStreamStateName:">&ndash;&nbsp;getStreamStateName:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取推流状态对应的字符串</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getStreamStateName:(KSYStreamState)<em>stat</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getCurStreamStateName" title="getCurStreamStateName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getCurStreamStateName">&ndash;&nbsp;getCurStreamStateName</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取当前推流状态对应的字符串</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getCurStreamStateName</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -776,6 +1009,88 @@
 					
 				</ul>
 			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getKSYStreamErrorCodeName:" title="getKSYStreamErrorCodeName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getKSYStreamErrorCodeName:">&ndash;&nbsp;getKSYStreamErrorCodeName:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取错误码对应的字符串</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getKSYStreamErrorCodeName:(KSYStreamErrorCode)<em>code</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getCurKSYStreamErrorCodeName" title="getCurKSYStreamErrorCodeName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getCurKSYStreamErrorCodeName">&ndash;&nbsp;getCurKSYStreamErrorCodeName</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取当前错误码对应的字符串</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getCurKSYStreamErrorCodeName</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
 			
 
 			
@@ -1063,64 +1378,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/processAudioSampleBuffer:" title="processAudioSampleBuffer:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/processAudioSampleBuffer:">&ndash;&nbsp;processAudioSampleBuffer:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>处理一段音频数据</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)processAudioSampleBuffer:(CMSampleBufferRef)<em>sampleBuffer</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>sampleBuffer</code></th>
-						<td><p>Buffer to process</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>应当在开始推流前定期调用此接口，与processVideoSampleBuffer 交错进行</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/processVideoPixelBuffer:timeInfo:" title="processVideoPixelBuffer:timeInfo:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/processVideoPixelBuffer:timeInfo:">&ndash;&nbsp;processVideoPixelBuffer:timeInfo:</a></code>
 </h3>
@@ -1184,6 +1441,64 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/processAudioSampleBuffer:" title="processAudioSampleBuffer:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/processAudioSampleBuffer:">&ndash;&nbsp;processAudioSampleBuffer:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>处理一段音频数据</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)processAudioSampleBuffer:(CMSampleBufferRef)<em>sampleBuffer</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sampleBuffer</code></th>
+						<td><p>Buffer to process</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>应当在开始推流前定期调用此接口，与processVideoSampleBuffer 交错进行</p><div class="warning"><p><strong>Warning:</strong> 目前只支持 单通道  S16 格式的PCM数据</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/streamID" title="streamID"></a>
 	<h3 class="method-title"><code><a href="#//api/name/streamID">&nbsp;&nbsp;streamID</a></code>
 </h3>
@@ -1227,6 +1542,48 @@
 					
 				</ul>
 			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isStreaming" title="isStreaming"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isStreaming">&ndash;&nbsp;isStreaming</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>查询当前是否处于推流状态 (建立连接中, 或连接中)
+@see</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isStreaming</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
 			
 
 			
@@ -1791,6 +2148,48 @@
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/getSnapshotWithCompletion:" title="getSnapshotWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getSnapshotWithCompletion:">&ndash;&nbsp;getSnapshotWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取当前编码的截图
+@param    通过完成代码块获取到截图完成的图像</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getSnapshotWithCompletion:(void ( ^ ) ( UIImage *))<em>completion</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYStreamerBase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -1804,10 +2203,10 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Kingsoft. All rights reserved. Updated: 2016-05-30</p>
+						<p class="copyright">Copyright &copy; 2016 Kingsoft. All rights reserved. Updated: 2016-08-02</p>
 						
 						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>
