@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KSYGPUBeautifyExtFilter Class Reference</title>
+	<title>KSYVideoInfo Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -54,23 +56,17 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/params">params</option>
+		<option value="//api/name/frame_height">frame_height</option>
 		
-		<option value="//api/name/singleStepOffset">singleStepOffset</option>
+		<option value="//api/name/frame_width">frame_width</option>
+		
+		<option value="//api/name/vcodec">vcodec</option>
 		
 	</optgroup>
 	
 
 	
 
-	
-	<optgroup label="Instance Methods">
-		
-		<option value="//api/name/setBeautylevel:">- setBeautylevel:</option>
-		
-		<option value="//api/name/setTexelSize:">- setTexelSize:</option>
-		
-	</optgroup>
 	
 	
 </select>
@@ -85,21 +81,29 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KSYGPUBeautifyExtFilter Class Reference</h1>
+					<h1 class="title">KSYVideoInfo Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td><a href="../Classes/KSYGPUFilter.html">KSYGPUFilter</a> : GPUImageFilter</td>
+	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>KSYGPUBeautifyExtFilter.h</td>
+	<td>KSYMediaInfo.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>视频信息</p>
+					</div>
+					
+					
 
 					
 					
@@ -112,8 +116,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/setBeautylevel:" title="setBeautylevel:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setBeautylevel:">&ndash;&nbsp;setBeautylevel:</a></code>
+	<a name="//api/name/vcodec" title="vcodec"></a>
+	<h3 class="method-title"><code><a href="#//api/name/vcodec">&nbsp;&nbsp;vcodec</a></code>
 </h3>
 
 	<div class="method-info">
@@ -121,15 +125,40 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>视频编码格式, 具体类型为MEDIAINFO_CODEC_ID</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setBeautylevel:(int)<em>level</em></code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) MEDIAINFO_CODEC_ID vcodec</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYMediaInfo.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/singleStepOffset" title="singleStepOffset"></a>
-	<h3 class="method-title"><code><a href="#//api/name/singleStepOffset">&nbsp;&nbsp;singleStepOffset</a></code>
+	<a name="//api/name/frame_width" title="frame_width"></a>
+	<h3 class="method-title"><code><a href="#//api/name/frame_width">&nbsp;&nbsp;frame_width</a></code>
 </h3>
 
 	<div class="method-info">
@@ -137,15 +166,40 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>视频帧宽度</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (readwrite, nonatomic) CGPoint singleStepOffset</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) int32_t frame_width</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYMediaInfo.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/params" title="params"></a>
-	<h3 class="method-title"><code><a href="#//api/name/params">&nbsp;&nbsp;params</a></code>
+	<a name="//api/name/frame_height" title="frame_height"></a>
+	<h3 class="method-title"><code><a href="#//api/name/frame_height">&nbsp;&nbsp;frame_height</a></code>
 </h3>
 
 	<div class="method-info">
@@ -153,26 +207,35 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>视频帧高度</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (readwrite, nonatomic) GPUVector4 params</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) int32_t frame_height</code></div>
 
 		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/setTexelSize:" title="setTexelSize:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setTexelSize:">&ndash;&nbsp;setTexelSize:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (void)setTexelSize:(CGPoint)<em>size</em></code></div>
+			
 
-		    
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KSYMediaInfo.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>

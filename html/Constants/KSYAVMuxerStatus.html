@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KSYCaptureState Constants Reference</title>
+	<title>KSYAVMuxerStatus Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KSYCaptureState Constants Reference</h1>
+					<h1 class="title">KSYAVMuxerStatus Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KSYTypeDef.h</td>
+	<td>KSYAVMuxer.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -75,7 +75,7 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KSYCaptureState</h3>
+                    <h3 class="subsubtitle method-title">KSYAVMuxerStatus</h3>
                     
 					
 					
@@ -83,19 +83,17 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSUInteger, KSYCaptureState ) {<br>
+                        <code>typedef NS_ENUM(NSInteger, KSYAVMuxerStatus ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">KSYCaptureStateIdle</a>,<br>
+                            &nbsp;&nbsp; <a href="">KSYAVMuxerStatusIdle</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">KSYCaptureStateCapturing</a>,<br>
+                            &nbsp;&nbsp; <a href="">KSYAVMuxerStatusMuxing</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">KSYCaptureStateDevAuthDenied</a>,<br>
+                            &nbsp;&nbsp; <a href="">KSYAVMuxerStatusCompleted</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">KSYCaptureStateClosingCapture</a>,<br>
+                            &nbsp;&nbsp; <a href="">KSYAVMuxerStatusFailed</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">KSYCaptureStateParameterError</a>,<br>
-                            
-                            &nbsp;&nbsp; <a href="">KSYCaptureStateDevBusy</a>,<br>
+                            &nbsp;&nbsp; <a href="">KSYAVMuxerStatusCancelled</a>,<br>
                             
                             };</code>
                     
@@ -105,11 +103,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KSYCaptureStateIdle"></a><code>KSYCaptureStateIdle</code></dt>
+                            <dt><a name="" title="KSYAVMuxerStatusIdle"></a><code>KSYAVMuxerStatusIdle</code></dt>
 <dd>
 
 
-<p>设备空闲中</p>
+<p>初始状态</p>
 
 
 
@@ -117,16 +115,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KSYTypeDef.h</code>.
+		Declared In <code class="declared-in-ref">KSYAVMuxer.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KSYCaptureStateCapturing"></a><code>KSYCaptureStateCapturing</code></dt>
+                            <dt><a name="" title="KSYAVMuxerStatusMuxing"></a><code>KSYAVMuxerStatusMuxing</code></dt>
 <dd>
 
 
-<p>设备工作中</p>
+<p>处理中</p>
 
 
 
@@ -134,16 +132,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KSYTypeDef.h</code>.
+		Declared In <code class="declared-in-ref">KSYAVMuxer.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KSYCaptureStateDevAuthDenied"></a><code>KSYCaptureStateDevAuthDenied</code></dt>
+                            <dt><a name="" title="KSYAVMuxerStatusCompleted"></a><code>KSYAVMuxerStatusCompleted</code></dt>
 <dd>
 
 
-<p>设备授权被拒绝</p>
+<p>处理完成</p>
 
 
 
@@ -151,16 +149,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KSYTypeDef.h</code>.
+		Declared In <code class="declared-in-ref">KSYAVMuxer.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KSYCaptureStateClosingCapture"></a><code>KSYCaptureStateClosingCapture</code></dt>
+                            <dt><a name="" title="KSYAVMuxerStatusFailed"></a><code>KSYAVMuxerStatusFailed</code></dt>
 <dd>
 
 
-<p>关闭采集设备中</p>
+<p>处理失败</p>
 
 
 
@@ -168,16 +166,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KSYTypeDef.h</code>.
+		Declared In <code class="declared-in-ref">KSYAVMuxer.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KSYCaptureStateParameterError"></a><code>KSYCaptureStateParameterError</code></dt>
+                            <dt><a name="" title="KSYAVMuxerStatusCancelled"></a><code>KSYAVMuxerStatusCancelled</code></dt>
 <dd>
 
 
-<p>参数错误，无法打开（比如设置的分辨率，码率当前设备不支持）</p>
+<p>处理任务被取消</p>
 
 
 
@@ -185,24 +183,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KSYTypeDef.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KSYCaptureStateDevBusy"></a><code>KSYCaptureStateDevBusy</code></dt>
-<dd>
-
-
-<p>设备正忙，请稍后尝试 ( 该状态在发出通知0.5秒后被清除 ）</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KSYTypeDef.h</code>.
+		Declared In <code class="declared-in-ref">KSYAVMuxer.h</code>.
 	</p>
 	
 </dd>
@@ -219,7 +200,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">KSYTypeDef.h</code></p>
+                        <p><code class="declared-in-ref">KSYAVMuxer.h</code></p>
                     </div>
                     
                     

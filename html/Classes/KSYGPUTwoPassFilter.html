@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KSYGPUBeautifyExtFilter Class Reference</title>
+	<title>KSYGPUTwoPassFilter Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -52,23 +52,17 @@
 
 	
 	
-	<optgroup label="Properties">
-		
-		<option value="//api/name/params">params</option>
-		
-		<option value="//api/name/singleStepOffset">singleStepOffset</option>
-		
-	</optgroup>
-	
 
 	
 
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/setBeautylevel:">- setBeautylevel:</option>
+		<option value="//api/name/encodeFilterString:">- encodeFilterString:</option>
 		
-		<option value="//api/name/setTexelSize:">- setTexelSize:</option>
+		<option value="//api/name/init">- init</option>
+		
+		<option value="//api/name/reloadFirstStageVertexShaderFromString:firstStageFragmentShaderFromString:secondStageVertexShaderFromString:secondStageFragmentShaderFromString:">- reloadFirstStageVertexShaderFromString:firstStageFragmentShaderFromString:secondStageVertexShaderFromString:secondStageFragmentShaderFromString:</option>
 		
 	</optgroup>
 	
@@ -85,16 +79,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KSYGPUBeautifyExtFilter Class Reference</h1>
+					<h1 class="title">KSYGPUTwoPassFilter Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td><a href="../Classes/KSYGPUFilter.html">KSYGPUFilter</a> : GPUImageFilter</td>
+	<td>GPUImageTwoPassTextureSamplingFilter</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>KSYGPUBeautifyExtFilter.h</td>
+	<td>KSYGPUTwoPassFilter.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -112,8 +106,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/setBeautylevel:" title="setBeautylevel:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setBeautylevel:">&ndash;&nbsp;setBeautylevel:</a></code>
+	<a name="//api/name/encodeFilterString:" title="encodeFilterString:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/encodeFilterString:">&ndash;&nbsp;encodeFilterString:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -122,14 +116,14 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (void)setBeautylevel:(int)<em>level</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)encodeFilterString:(NSString *)<em>strString</em></code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/singleStepOffset" title="singleStepOffset"></a>
-	<h3 class="method-title"><code><a href="#//api/name/singleStepOffset">&nbsp;&nbsp;singleStepOffset</a></code>
+	<a name="//api/name/init" title="init"></a>
+	<h3 class="method-title"><code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
 </h3>
 
 	<div class="method-info">
@@ -138,14 +132,14 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (readwrite, nonatomic) CGPoint singleStepOffset</code></div>
+			<div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/params" title="params"></a>
-	<h3 class="method-title"><code><a href="#//api/name/params">&nbsp;&nbsp;params</a></code>
+	<a name="//api/name/reloadFirstStageVertexShaderFromString:firstStageFragmentShaderFromString:secondStageVertexShaderFromString:secondStageFragmentShaderFromString:" title="reloadFirstStageVertexShaderFromString:firstStageFragmentShaderFromString:secondStageVertexShaderFromString:secondStageFragmentShaderFromString:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reloadFirstStageVertexShaderFromString:firstStageFragmentShaderFromString:secondStageVertexShaderFromString:secondStageFragmentShaderFromString:">&ndash;&nbsp;reloadFirstStageVertexShaderFromString:firstStageFragmentShaderFromString:secondStageVertexShaderFromString:secondStageFragmentShaderFromString:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -154,23 +148,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (readwrite, nonatomic) GPUVector4 params</code></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/setTexelSize:" title="setTexelSize:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setTexelSize:">&ndash;&nbsp;setTexelSize:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><code>- (void)setTexelSize:(CGPoint)<em>size</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)reloadFirstStageVertexShaderFromString:(NSString *)<em>firstStageVertexShaderString</em> firstStageFragmentShaderFromString:(NSString *)<em>firstStageFragmentShaderString</em> secondStageVertexShaderFromString:(NSString *)<em>secondStageVertexShaderString</em> secondStageFragmentShaderFromString:(NSString *)<em>secondStageFragmentShaderString</em></code></div>
 
 		    
 		</div>

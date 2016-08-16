@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KSYGPUBeautifyPlusFilter_t Class Reference</title>
+	<title>KSYGPUFilter Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -58,7 +58,11 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/setBeautylevel:">- setBeautylevel:</option>
+		<option value="//api/name/encodeFilterString:">- encodeFilterString:</option>
+		
+		<option value="//api/name/init">- init</option>
+		
+		<option value="//api/name/reload:">- reload:</option>
 		
 	</optgroup>
 	
@@ -75,7 +79,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KSYGPUBeautifyPlusFilter_t Class Reference</h1>
+					<h1 class="title">KSYGPUFilter Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -84,7 +88,7 @@
 	<td>GPUImageFilter</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>KSYGPUBeautifyPlusFilter_t.h</td>
+	<td>KSYGPUFilter.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -102,8 +106,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/setBeautylevel:" title="setBeautylevel:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setBeautylevel:">&ndash;&nbsp;setBeautylevel:</a></code>
+	<a name="//api/name/encodeFilterString:" title="encodeFilterString:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/encodeFilterString:">&ndash;&nbsp;encodeFilterString:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -112,7 +116,39 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (void)setBeautylevel:(int)<em>level</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (NSString *)encodeFilterString:(NSString *)<em>strString</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/init" title="init"></a>
+	<h3 class="method-title"><code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/reload:" title="reload:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reload:">&ndash;&nbsp;reload:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)reload:(NSString *)<em>fragmentShaderString</em></code></div>
 
 		    
 		</div>
